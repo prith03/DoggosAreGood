@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;450&display=swap');
+
+:root{
+    --primary-color: rgb(67, 163, 67);
+    --secondary-color: rgb(93,93,93);
+    --background-color: rgb(227, 227, 227);
+}
+
+body {
+    margin: 0;
+    font-family: 'Oswald';
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.subhead{
+    color:var(--secondary-color);                
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .2em;
+    line-height: 1.75em;
+    margin-bottom: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--background-color);
+}
+
+.header h1 {
+    font-size: 2em;
+    letter-spacing: .075em;
+    margin-bottom: .7em;
+    margin-top: 0;
+    color: var(--primary-color)
+    
+}
+
+.header select {
+    font-size: 1rem;
+}
+
+.slideshow {
+    flex: 1;
+    background-color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0;
+    transform: scale(1);
+    transition: all .9s ease-out;
+}
+
+.slide:nth-last-child(2) {
+    opacity: 1;
+    transform: scale(1.08);
+}
